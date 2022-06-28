@@ -1,16 +1,29 @@
 <!DOCTYPE HTML>
-<!--
-	Editorial by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 	<head>
 		<title>Mathematical Analysis - Max Young WONG</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="../../assets/css/main.css" />
-		<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=AM_HTMLorMML-full"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_HTML" async></script>
+		<script type="text/x-mathjax-config;executed=true">
+			window.MathJax.Hub.Config({
+				showProcessingMessages: false, //关闭js加载过程信息
+				messageStyle: "none", //不显示信息
+				jax: ["input/TeX", "output/HTML-CSS"],
+				tex2jax: {
+					inlineMath: [["$", "$"], ["\\(", "\\)"]], //行内公式选择符
+					displayMath: [["$$", "$$"], ["\\[", "\\]"]], //段内公式选择符
+					skipTags: ["script", "noscript", "style", "textarea", "pre", "code", "a"] //避开某些标签
+				},
+				"HTML-CSS": {
+					availableFonts: ["STIX", "TeX"], //可选字体
+					showMathMenu: false //关闭右击菜单显示
+				}
+			});
+			//下面第三个参数可以不写，默认对整个html内的latex进行翻译
+			window.MathJax.Hub.Queue(["Typeset", MathJax.Hub,document.getElementsByClassName("ck-content")]);
+		</script>
 	</head>
 	<body class="is-preload">
 
@@ -114,7 +127,7 @@
 										<h3>Part 7: General Fourier Analysis</h3>
 										-->
 										<h3>Part 1: Convergence & Continuity</h3>
-											<a href="./1-1.html">Construction for Real Numbers</a>
+											<a href="./Contents/1-1-Construction-for-Real-Numbers.html">Construction for Real Numbers</a>
 											<hr />
 										<h3>Part 2: One-variable Differentiation & Integration</h3>
 											<hr />

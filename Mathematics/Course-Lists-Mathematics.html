@@ -10,7 +10,25 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="../assets/css/main.css" />
-		<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=AM_HTMLorMML-full"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_HTML" async></script>
+		<script type="text/x-mathjax-config;executed=true">
+			window.MathJax.Hub.Config({
+				showProcessingMessages: false, //关闭js加载过程信息
+				messageStyle: "none", //不显示信息
+				jax: ["input/TeX", "output/HTML-CSS"],
+				tex2jax: {
+					inlineMath: [["$", "$"], ["\\(", "\\)"]], //行内公式选择符
+					displayMath: [["$$", "$$"], ["\\[", "\\]"]], //段内公式选择符
+					skipTags: ["script", "noscript", "style", "textarea", "pre", "code", "a"] //避开某些标签
+				},
+				"HTML-CSS": {
+					availableFonts: ["STIX", "TeX"], //可选字体
+					showMathMenu: false //关闭右击菜单显示
+				}
+			});
+			//下面第三个参数可以不写，默认对整个html内的latex进行翻译
+			window.MathJax.Hub.Queue(["Typeset", MathJax.Hub,document.getElementsByClassName("ck-content")]);
+		</script>
 	</head>
 	<body class="is-preload">
 
@@ -27,9 +45,7 @@
 								<ul class="icons">
 									<li><a href="https://twitter.com/YoengM" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
 									<li><a href="https://www.facebook.com/yiyang.wang.77" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-									<!-- <li><a href="#" class="icon brands fa-snapchat-ghost"><span class="label">Snapchat</span></a></li> -->
 									<li><a href="https://www.instagram.com/maix_yoeng/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-									<!-- <li><a href="#" class="icon brands fa-medium-m"><span class="label">Medium</span></a></li> -->
 								</ul>
 							</header>
 
@@ -38,54 +54,94 @@
 									<header class="main">
 										<h1>Lists of Courses (Mathematics)</h1>
 									</header>
-									
 									<h2>Core Corriculum</h2>
 									<div class="table-wrapper">
 										<table>
 											<thead>
 												<tr>
 													<th>Course Name</th>
+													<th>课程名</th>
 													<th>Description</th>
-													<th>Course Number (Fudan)</th>
+													<th>Course Number (Fudan-MATH)</th>
+													<th>Credits</th>
 												</tr>
 											</thead>
 											<tbody>
 												<tr>
 													<td><a href="./Mathematical-Analysis/Mathematical-Analysis.html">Mathematical Analysis</a></td>
+													<td>数学分析</td>
+													<td>一元与多元微积分学，逼近理论基础，傅里叶分析基础</td>
+													<td>120014, 120015, 130001</td>
+													<td>5+5+5</td>
 												</tr>
 												<tr>
 													<td>Advanced Algebra</td>
+													<td>高等代数</td>
+													<td>矩阵学，线性空间理论，二次型理论，内积空间理论</td>
+													<td>120011, 130002</td>
+													<td>5+5</td>
+												</tr>
+												<tr>
+													<td>Abstract Algebra</td>
+													<td>抽象代数</td>
+													<td>群论，环论，域论基础</td>
+													<td>130005</td>
+													<td>3</td>
 												</tr>
 												<tr>
 													<td>Analytic Geometry</td>
+													<td>解析几何</td>
+													<td>二次曲线的分类，不变群视角下的仿射变换、射影变换</td>
+													<td>120010</td>
+													<td>3</td>
 												</tr>
 												<tr>
-													<td>Modern Algebra</td>
-												</tr>
-												<tr>
-													<td>General Topology</td>
-												</tr>
-												<tr>
-													<td>Real Analysis</td>
-													<td>Measure Theory & Lebesgue Integration</td>
-												</tr>
-												<tr>
-													<td>Complex Analysis</td>
+													<td>Topology</td>
+													<td>拓扑学</td>
+													<td>点集拓扑学，同伦论基础</td>
+													<td>130010</td>
+													<td>3</td>
 												</tr>
 												<tr>
 													<td>Ordinary Differential Equation</td>
+													<td>常微分方程</td>
+													<td>常微分方程基础，Lyapunov稳定性理论基础</td>
+													<td>130004</td>
+													<td>3</td>
+												</tr>
+												<tr>
+													<td>Functions of Real Variable (Real Analysis)</td>
+													<td>实变函数</td>
+													<td>测度理论，积分理论，Lebesgue积分理论</td>
+													<td>130007</td>
+													<td>3</td>
+												</tr>
+												<tr>
+													<td>Functions of Complex Variable</td>
+													<td>复变函数</td>
+													<td>复分析基础</td>
+													<td>130006</td>
+													<td>3</td>
 												</tr>
 												<tr>
 													<td>Probability Theory</td>
+													<td>概率论</td>
+													<td>测度论视角下的概率论基础</td>
+													<td>130009</td>
+													<td>3</td>
 												</tr>
 												<tr>
-													<td>Computational Mathematics</td>
+													<td>Differential Geometry</td>
+													<td>微分几何</td>
+													<td>\(\mathbb{R}^3\)中的曲线论、曲面论</td>
+													<td>130013</td>
+													<td>3</td>
 												</tr>
 											</tbody>
 											<tfoot>
 												<tr>
 													<td></td>
-													<td colspan="2"></td>
+													<td colspan="5"></td>
 												</tr>
 											</tfoot>
 										</table>
@@ -97,49 +153,88 @@
 											<thead>
 												<tr>
 													<th>Course Name</th>
+													<th>课程名</th>
 													<th>Description</th>
-													<th>Course Number (Fudan)</th>
+													<th>Course Number (Fudan-MATH)</th>
+													<th>Credits</th>
 												</tr>
 											</thead>
 											<tbody>
 												<tr>
 													<td>Modern Algebra</td>
+													<td>现代代数学</td>
+													<td></td>
+													<td></td>
+													<td>3+3</td>
 												</tr>
 												<tr>
-													<td>Algebraic Topology</td>
+													<td>Topology II</td>
+													<td>拓扑学II</td>
+													<td>代数拓扑学同调论基础</td>
+													<td>130112</td>
+													<td>3</td>
 												</tr>
 												<tr>
-													<td>Differential Geometry</td>
+													<td>Computational Mathematics</td>
+													<td>计算方法</td>
+													<td>计算数学基础</td>
+													<td>130036</td>
+													<td>3</td>
 												</tr>
 												<tr>
 													<td>Differential Calculus on Manifolds</td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
 												</tr>
 												<tr>
 													<td>Partial Differential Equation</td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
 												</tr>
 												<tr>
 													<td>Functional Analysis</td>
-												</tr>
-												<tr>
-													<td>Fourier Analysis</td>
+													<td>泛函分析</td>
+													<td>泛函分析基础，算子理论</td>
+													<td>130011</td>
+													<td>3</td>
 												</tr>
 												<tr>
 													<td>Mathematical Physics</td>
+													<td>数理方程</td>
+													<td></td>
+													<td>130012</td>
+													<td>3</td>
 												</tr>
 												<tr>
 													<td>Stochastic Analysis</td>
+													<td>随机分析</td>
+													<td></td>
+													<td>130116</td>
+													<td>3</td>
 												</tr>
 												<tr>
 													<td>Mathematical Modeling</td>
+													<td>数学模型</td>
+													<td></td>
+													<td>130008</td>
+													<td>3</td>
 												</tr>
 												<tr>
 													<td>Numerical Solution of Differential Equations</td>
+													<td>微分方程数值解法</td>
+													<td></td>
+													<td>130016</td>
+													<td>3</td>
 												</tr>
 											</tbody>
 											<tfoot>
 												<tr>
 													<td></td>
-													<td colspan="2"></td>
+													<td colspan="5"></td>
 												</tr>
 											</tfoot>
 										</table>
@@ -151,19 +246,21 @@
 											<thead>
 												<tr>
 													<th>Course Name</th>
+													<th>课程名</th>
 													<th>Description</th>
-													<th>Course Number (Fudan)</th>
+													<th>Course Number (Fudan-MATH)</th>
+													<th>Credits</th>
 												</tr>
 											</thead>
 											<tbody>
 												<tr>
-													<td>`\sim`</td>
+													<td>\(\sim\)</td>
 												</tr>
 											</tbody>
 											<tfoot>
 												<tr>
 													<td></td>
-													<td colspan="2"></td>
+													<td colspan="5"></td>
 												</tr>
 											</tfoot>
 										</table>
